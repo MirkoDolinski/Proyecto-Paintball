@@ -4,11 +4,9 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;  
 
-// Middleware
 app.use(express.static('public'));  
 app.use(bodyParser.json());
 
-// Conexión a la base de datos
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -24,7 +22,6 @@ connection.connect((err) => {
     console.log('Conexión exitosa a la base de datos');
 });
 
-// Ruta para consultar todas las reservas
 app.get('/reservas', (req, res) => {
     const query = 'SELECT * FROM reservas';
     connection.query(query, (err, results) => {
@@ -37,7 +34,6 @@ app.get('/reservas', (req, res) => {
     });
 });
 
-// Ruta para crear una nueva reserva
 app.post('/nueva-reserva', (req, res) => {
     const { name, email, phone, date, time, players } = req.body;
     const query = 'INSERT INTO reservas (name, email, phone, date, time, players) VALUES (?, ?, ?, ?, ?, ?)';
@@ -52,7 +48,6 @@ app.post('/nueva-reserva', (req, res) => {
     });
 });
 
-// Iniciar el servidor
 app.listen(port, () => {
     console.log(`Servidor corriendo en http://localhost:${port}`);
 });
