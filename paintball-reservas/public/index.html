@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas Paintball</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+    <h1>Reservas de Paintball</h1>
+    
+    <!-- Formulario para crear una nueva reserva -->
+    <section>
+        <h2>Hacer una nueva reserva</h2>
+        <form id="reservaForm" method="POST">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="date">Fecha de la reserva:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Horario:</label>
+            <input type="time" id="time" name="time" required>
+            
+            <label for="players">Número de jugadores:</label>
+            <input type="number" id="players" name="players" min="1" required>
+            
+            <label for="location">Sede:</label>
+            <select id="location" name="location" required>
+                <option value="Villa Urquiza">Villa Urquiza</option>
+                <option value="Nuñez">Nuñez</option>
+                <option value="Moron">Moron</option>
+                <option value="Villa Madero">Villa Madero</option>
+                <option value="La Tablada">La Tablada</option>
+                <option value="Villa 21">Villa 21</option>
+            </select>
+            
+            <button type="submit">Reservar</button>
+        </form>
+    </section>
+
+    <!-- Sección para consultar las reservas -->
+    <section>
+        <h2>Consultar reservas</h2>
+        <button id="consultarBtn">Consultar Mis Reservas</button>
+        <ul id="reservasList"></ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

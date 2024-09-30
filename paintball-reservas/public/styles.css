@@ -1,0 +1,171 @@
+/* Estilo general */
+body {
+    background-image: url(paintball.jpg);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Centra el contenido vertical y horizontalmente */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo del título h1 */
+h1 {
+    text-align: center;
+    color: hsl(113, 100%, 40%); /* Color verde más oscuro */
+    font-size: 3em; /* Ajustado para un tamaño más adecuado */
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px; /* Espaciado de letras más sutil */
+    text-transform: uppercase; /* Convertir a mayúsculas */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra de texto más sutil */
+    background: linear-gradient(90deg, hsl(113, 100%, 50%), hsl(50, 100%, 50%)); /* Gradiente de color */
+    -webkit-background-clip: text;
+    background-clip: text; /* Propiedad estándar (para WebKit) */
+    -webkit-text-fill-color: transparent; /* Hacer que el texto sea transparente para el gradiente */
+    padding: 10px; /* Espaciado interno */
+    border-bottom: 2px solid hsl(113, 100%, 30%); /* Línea de borde más delgada */
+    display: inline-block; /* Asegura que el padding y border se apliquen correctamente */
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #4CAF50;
+    border-bottom: 3px solid #4CAF50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Estilo de secciones */
+section {
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Estilo específico para el botón "Consultar Reservas" */
+#consultarBtn {
+    background-color: #2196F3;
+    margin-bottom: 20px;
+}
+
+#consultarBtn:hover {
+    background-color: #1e88e5;
+}
+
+/* Estilo de la lista de reservas */
+#reservasList {
+    list-style: none;
+    padding: 0;
+}
+
+#reservasList li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+#reservasList li:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#reservasList li span {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.reserva-header {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.reserva-details {
+    font-size: 0.95em;
+    color: #666;
+}
+
+.no-reservas {
+    text-align: center;
+    color: #888;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Transiciones suaves */
+button, input, #reservasList li {
+    transition: all 0.3s ease;
+}
