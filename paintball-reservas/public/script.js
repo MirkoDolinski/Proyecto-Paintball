@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Consultar reservas
+    
     const consultarBtn = document.getElementById('consultarBtn');
     const reservasList = document.getElementById('reservasList');
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Enviar nueva reserva
+    
     const reservaForm = document.getElementById('reservaForm');
     reservaForm.addEventListener('submit', async (event) => {
         event.preventDefault();
